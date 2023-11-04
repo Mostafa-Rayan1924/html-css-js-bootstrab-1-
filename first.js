@@ -34,7 +34,7 @@ gear.addEventListener("click", function (e) {
 });
 
 // get value of setlocal storage
-if (localStorage.length > 0) {
+if (localStorage !== null) {
   document.documentElement.style.setProperty(
     "--main-color",
     localStorage.getItem("color")
@@ -83,7 +83,7 @@ window.onscroll = function () {
 
 // animate width
 
-// varuable of sec skills
+// variable of sec skills
 let skills = document.querySelector(".skills");
 // variable of all spans
 let spans = document.querySelectorAll(".span");
@@ -192,10 +192,3 @@ document.addEventListener("scroll", function () {
     f.style.transform = "translateX(0)";
   }
 });
-let preloader = document.getElementById("preload");
-window.onload = function () {
-  preloader.style.display = "block";
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 3000);
-};
